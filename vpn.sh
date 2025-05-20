@@ -1,7 +1,7 @@
 #!/bin/bash
 SECRETS_FILE="$HOME/.vpn_secrets.gpg"
 AUTH_FILE="/tmp/ovpn_creds.txt"
-OVPN_CONFIG="./config.ovpn"  # <- replace with your actual .ovpn config path
+OVPN_CONFIG="$HOME/.config.ovpn"  # <- replace with your actual .ovpn config path
 
 # === Decrypt secrets (GPG will prompt for passphrase) ===
 eval $(gpg --quiet --batch --decrypt "$SECRETS_FILE")
